@@ -3,12 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Range slider</title>
     <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
-    <img src="./images/logo.svg" alt="Logo">
-    <h1>Hello Mate Academy</h1>
+      <form class="slider">
+        <p class="slider__value">
+          <label for="min" class="slider__label slider__label--min">Min:</label>
+          <input class="slider__input slider__input--min" type="number" id="min" min="0" max="500" minlength="0" maxlength="500" value="0">
+        </p>
+        <p class="slider__value">
+          <label for="max" class="slider__label slider__label--max">Max:</label>
+          <input class="slider__input slider__input--max" type="number" id="max" min="0" max="500" minlength="0" maxlength="500" value="300">
+        </p>
+        <div class="slider__scale">
+          <div class="slider__toggle slider__toggle--min"></div>
+          <div class="slider__diff-line"></div>
+          <div class="slider__toggle slider__toggle--max"></div>
+        </div>
+      </form>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
