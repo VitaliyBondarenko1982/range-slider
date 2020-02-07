@@ -1,0 +1,56 @@
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  background: #eee; }
+
+.slider {
+  position: relative;
+  width: 510px;
+  margin: auto; }
+  .slider__scale {
+    position: relative;
+    margin-top: 40px;
+    width: 510px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: #d7dcde;
+    border: 1px solid grey;
+    cursor: pointer; }
+  .slider__toggle {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 20px;
+    height: 30px;
+    border: 1px solid grey;
+    background: #eee;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px; }
+    .slider__toggle--min {
+      left: 50px; }
+    .slider__toggle--max {
+      left: 300px; }
+  .slider__diff-line {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+    background-color: lightblue;
+    height: 16px; }
+
+/*# sourceMappingURL=main.css.map */
