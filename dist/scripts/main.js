@@ -161,10 +161,6 @@ const minInputHandler = (inputEvt) => {
 };
 
 const maxInputHandler = (inputEvt) => {
-  if (inputMax.value < inputMin.value) {
-    return;
-  }
-
   maxToggle.style.left = `${inputMax.value}px`;
   diffCounter(minToggle, maxToggle);
 };
