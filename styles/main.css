@@ -28,7 +28,7 @@ body {
     background-color: #d7dcde;
     border: 1px solid grey;
     cursor: pointer; }
-  .slider__toggle {
+  .slider__thumb {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -39,11 +39,32 @@ body {
     background: #eee;
     z-index: 1;
     cursor: pointer;
-    border-radius: 2px; }
-    .slider__toggle--min {
+    border-radius: 2px;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out; }
+    .slider__thumb--min {
       left: 50px; }
-    .slider__toggle--max {
+    .slider__thumb--max {
       left: 300px; }
+  .slider__tooltip {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 45px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 30px;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s easy-in-out;
+    transition: opacity 0.5s easy-in-out; }
+  .slider__thumb:hover {
+    background-color: #b9cced; }
+    .slider__thumb:hover .slider__tooltip {
+      opacity: 1; }
   .slider__diff-line {
     position: absolute;
     top: 50%;
