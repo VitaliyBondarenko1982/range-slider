@@ -2,6 +2,80 @@
 @import "fonts";
 @import "typography";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: $c-gray;
+}
+
+.slider {
+  position: relative;
+  width: 510px;
+  margin: auto;
+
+  &__scale {
+    position: relative;
+    margin-top: 40px;
+    width: 510px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: #d7dcde;
+    border: 1px solid grey;
+    cursor: pointer;
+  }
+
+  &__thumb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 30px;
+    border: 1px solid grey;
+    background: #eee;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.5s ease-in-out;
+
+    &--min {
+      left: 50px;
+    }
+
+    &--max {
+      left: 300px;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 30px;
+    opacity: 0;
+    transition: opacity 0.5s easy-in-out;
+  }
+
+  &__thumb:hover {
+    background-color: #b9cced;
+    .slider__tooltip {
+      opacity: 1;
+    }
+  }
+
+  &__diff-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: lightblue;
+    height: 16px;
+  }
 }
