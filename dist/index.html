@@ -10,16 +10,34 @@
       <form class="slider">
         <p class="slider__value">
           <label for="min" class="slider__label slider__label--min">Min:</label>
-          <input class="slider__input slider__input--min" type="number" id="min" min="0" max="500" minlength="0" maxlength="500" value="0">
+          <input
+            class="slider__input slider__input--min"
+            type="number"
+            id="min"
+            min="0"
+            max="500"
+            value="0"
+          >
         </p>
         <p class="slider__value">
           <label for="max" class="slider__label slider__label--max">Max:</label>
-          <input class="slider__input slider__input--max" type="number" id="max" min="0" max="500" minlength="0" maxlength="500" value="300">
+          <input
+            class="slider__input slider__input--max"
+            type="number"
+            id="max"
+            min="0"
+            max="500"
+            value="300"
+          >
         </p>
         <div class="slider__scale">
-          <div class="slider__toggle slider__toggle--min"></div>
+          <div class="slider__thumb slider__thumb--min">
+            <div class="slider__tooltip slider__tooltip--min">0</div>
+          </div>
           <div class="slider__diff-line"></div>
-          <div class="slider__toggle slider__toggle--max"></div>
+          <div class="slider__thumb slider__thumb--max">
+            <div class="slider__tooltip slider__tooltip--max">0</div>
+          </div>
         </div>
       </form>
     <script type="text/javascript" src="scripts/main.js"></script>

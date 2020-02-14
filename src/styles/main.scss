@@ -26,7 +26,7 @@ body {
     cursor: pointer;
   }
 
-  &__toggle {
+  &__thumb {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -37,6 +37,7 @@ body {
     z-index: 1;
     cursor: pointer;
     border-radius: 2px;
+    transition: background-color 0.5s ease-in-out;
 
     &--min {
       left: 50px;
@@ -44,6 +45,28 @@ body {
 
     &--max {
       left: 300px;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 30px;
+    opacity: 0;
+    transition: opacity 0.5s easy-in-out;
+  }
+
+  &__thumb:hover {
+    background-color: #b9cced;
+    .slider__tooltip {
+      opacity: 1;
     }
   }
 
